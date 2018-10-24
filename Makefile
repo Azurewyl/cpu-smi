@@ -9,8 +9,4 @@ clean:
 	-$(MAKE) -C nanos-lite clean
 	-$(MAKE) -C navy-apps clean
 
-submit: clean
-	git gc
-	STUID=$(STUID) STUNAME=$(STUNAME) bash -c "$$(curl -s http://moon.nju.edu.cn/people/yyjiang/teach/submit.sh)"
-
-.PHONY: default clean submit
+.PHONY: default clean
